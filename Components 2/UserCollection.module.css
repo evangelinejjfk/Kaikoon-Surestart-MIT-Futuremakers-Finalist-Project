@@ -1,0 +1,93 @@
+.collectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.collectionItem {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.emojiBackground {
+  background-color: var(--muted);
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.emojiImage {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.itemName {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--surface-foreground);
+  margin: 0;
+}
+
+.quantityBadge {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  background-color: var(--kaiblooms);
+  color: var(--kaiblooms-foreground);
+  border: 2px solid var(--surface);
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-12) var(--spacing-6);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.emptyState h3 {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-2);
+}
+
+.emptyState p {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-4);
+}
+
+.shopLink {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.shopLink:hover {
+  text-decoration: underline;
+}
+
+.errorState {
+  text-align: center;
+  color: var(--error);
+  padding: var(--spacing-8);
+  background-color: color-mix(in srgb, var(--error) 10%, transparent);
+  border-radius: var(--radius-md);
+}

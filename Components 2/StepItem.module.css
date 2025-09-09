@@ -1,0 +1,52 @@
+.stepItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--animation-duration-fast) ease;
+}
+
+.stepItem:hover {
+  background-color: var(--muted);
+}
+
+.stepContent {
+  flex: 1;
+  padding-top: 1px; /* Align text better with checkbox */
+}
+
+.stepLabel {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--foreground);
+  cursor: pointer;
+  transition: color var(--animation-duration-fast) ease, text-decoration var(--animation-duration-fast) ease;
+}
+
+.materials {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.materialsIcon {
+  flex-shrink: 0;
+}
+
+.materialsText {
+  word-break: break-word;
+}
+
+/* Completed State */
+.completed .stepLabel {
+  text-decoration: line-through;
+  color: var(--muted-foreground);
+}
+
+.completed .materials {
+  opacity: 0.7;
+}

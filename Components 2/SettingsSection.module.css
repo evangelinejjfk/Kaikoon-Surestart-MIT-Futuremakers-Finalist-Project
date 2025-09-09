@@ -1,0 +1,51 @@
+.section {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.iconWrapper {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+  color: var(--primary);
+}
+
+.iconWrapper svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--surface-foreground);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}

@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: var(--spacing-4);
+  font-family: var(--font-family-base);
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--spacing-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2);
+}
+
+.subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.progressIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.activeStep {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.completedStep {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.separator {
+  color: var(--border);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.label {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--surface-foreground);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-4);
+}
+
+.footer button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}

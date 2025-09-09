@@ -1,0 +1,111 @@
+.pageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--background);
+  padding: var(--spacing-4);
+  font-family: var(--font-family-base);
+}
+
+.loginCard {
+  background-color: var(--surface);
+  padding: var(--spacing-8) var(--spacing-6);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: var(--spacing-6);
+  color: var(--primary);
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tabsContainer {
+  width: 100%;
+}
+
+.tabsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabTrigger {
+  flex: 1;
+  text-align: center;
+}
+
+.tabContent {
+  padding-top: var(--spacing-6);
+  outline: none;
+}
+
+.testCredentials {
+  display: flex;
+  gap: var(--spacing-3);
+  background-color: color-mix(in srgb, var(--info) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--info) 40%, transparent);
+  padding: var(--spacing-3);
+  border-radius: var(--radius);
+  margin-top: var(--spacing-6);
+}
+
+.infoIcon {
+  color: var(--info);
+  flex-shrink: 0;
+  margin-top: var(--spacing-1);
+}
+
+.credentialsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.credentialsTitle {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  color: var(--surface-foreground);
+  margin: 0;
+}
+
+.credentialsText {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.credentialsText strong {
+  font-weight: 500;
+  color: var(--surface-foreground);
+}
+
+.credentialsText span {
+  font-family: var(--font-family-monospace);
+}
+
+@media (max-width: 480px) {
+  .loginCard {
+    padding: var(--spacing-6) var(--spacing-4);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+  }
+
+  .logo {
+    font-size: var(--font-size-2xl);
+  }
+}

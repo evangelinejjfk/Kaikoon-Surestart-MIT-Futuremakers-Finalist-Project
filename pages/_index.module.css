@@ -1,0 +1,92 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  /* Enforce a dark background to make the logo pop, as requested */
+  background-color: hsl(222, 25%, 12%);
+  color: var(--foreground);
+  font-family: var(--font-family-base);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: fadeIn 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.logo {
+  animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.2s forwards;
+  transform: scale(0.5);
+  opacity: 0;
+  margin-bottom: var(--spacing-6);
+}
+
+.appName {
+  font-family: var(--font-family-heading);
+  font-size: 3rem;
+  font-weight: 700;
+  /* Use a light foreground color that works on the dark background */
+  color: hsl(220, 15%, 95%);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 400;
+  /* Use a muted foreground color for the tagline */
+  color: hsl(220, 10%, 65%);
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.tapHint {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: hsl(220, 10%, 50%);
+  opacity: 0;
+  animation: fadeInHint 1s ease-in-out 1.5s forwards;
+}
+
+.loadingState {
+  margin-top: var(--spacing-4);
+  opacity: 0;
+  animation: fadeInHint 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInHint {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

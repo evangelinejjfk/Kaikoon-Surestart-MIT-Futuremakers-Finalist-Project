@@ -1,0 +1,209 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) var(--spacing-6);
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.backButton {
+  color: var(--muted-foreground);
+}
+
+.backButton:hover {
+  color: var(--foreground);
+  background-color: var(--muted);
+}
+
+.headerTitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.taskTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.estimatedTime {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.mainContent {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: var(--spacing-6);
+  padding-bottom: 7rem; /* Space for the finish button */
+}
+
+.timerCard {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.timerDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--timer-foreground);
+}
+
+.timerIcon {
+  color: var(--muted-foreground);
+}
+
+.timerText {
+  font-family: var(--font-family-monospace);
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.timerControls {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.timerButton {
+  border-radius: var(--radius-full);
+  min-width: 100px;
+}
+
+.stepsContainer {
+  margin-top: var(--spacing-8);
+}
+
+.stepsHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-4) 0;
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.noSteps {
+  text-align: center;
+  color: var(--muted-foreground);
+  padding: var(--spacing-8);
+  background-color: var(--muted);
+  border-radius: var(--radius-md);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-4) var(--spacing-6);
+  background: linear-gradient(to top, var(--background) 50%, transparent);
+  display: flex;
+  justify-content: center;
+}
+
+.finishButton {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  height: 3.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.checklistCard {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+  box-shadow: var(--shadow);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-md);
+  transition: background-color var(--animation-duration-fast) ease;
+}
+
+.step:hover {
+  background-color: var(--muted);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.checklistTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-4) 0;
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.finishContainer {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-4);
+  margin-top: var(--spacing-6);
+}
+
+.errorState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: var(--spacing-4);
+  padding: var(--spacing-8);
+  text-align: center;
+  color: var(--error);
+}
