@@ -1,0 +1,134 @@
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.emojiContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--spacing-2) 0;
+}
+
+.emojiButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-2);
+  border-radius: var(--radius-full);
+  transition: transform var(--animation-duration-fast) ease, background-color var(--animation-duration-fast) ease;
+}
+
+.emojiButton:hover {
+  background-color: var(--muted);
+}
+
+.emojiButton.selected {
+  transform: scale(1.3);
+  background-color: color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.textarea {
+  min-height: 8rem;
+}
+
+.submitButton {
+  width: 100%;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: var(--spacing-2);
+}
+
+/* Success State */
+.successState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-8) 0;
+  gap: var(--spacing-2);
+}
+
+.successIcon {
+  width: 4rem;
+  height: 4rem;
+  color: var(--success);
+}
+
+.successTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--popup-foreground);
+}
+
+.successDescription {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.kaibloomLogo {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* Sentiment Result */
+.sentimentResult {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-3);
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.sentimentLabel {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-1);
+}
+
+.sentimentValue {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sentimentValue.positive {
+  color: var(--success);
+}
+
+.sentimentValue.negative {
+  color: var(--error);
+}
+
+.sentimentValue.neutral {
+  color: var(--muted-foreground);
+}

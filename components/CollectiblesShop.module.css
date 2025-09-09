@@ -1,0 +1,100 @@
+.shopContainer {
+  width: 100%;
+}
+
+.shopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.itemCard {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.itemCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.unaffordable {
+  opacity: 0.6;
+  filter: grayscale(50%);
+}
+
+.emojiBackground {
+  background-color: var(--muted);
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.emoji {
+  font-size: 2.5rem;
+}
+
+.emojiImage {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.itemName {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--surface-foreground);
+  margin: 0 0 var(--spacing-1);
+}
+
+.itemDescription {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  margin: 0 0 var(--spacing-3);
+  flex-grow: 1;
+  min-height: 40px; /* Ensure consistent height */
+}
+
+.costContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.pointsLogo {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.cost {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--kaiblooms);
+}
+
+.purchaseButton {
+  width: 100%;
+  border-radius: var(--radius-full);
+}
+
+.errorState {
+  text-align: center;
+  color: var(--error);
+  padding: var(--spacing-8);
+  background-color: color-mix(in srgb, var(--error) 10%, transparent);
+  border-radius: var(--radius-md);
+}

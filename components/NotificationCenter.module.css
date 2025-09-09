@@ -1,0 +1,181 @@
+.popoverContent {
+  width: 380px;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background-color: var(--surface);
+  color: var(--surface-foreground);
+  border: 1px solid var(--border);
+}
+
+.triggerButton {
+  position: relative;
+}
+
+.notificationDot {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  flex-shrink: 0;
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  font-family: var(--font-family-heading);
+  margin: 0;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.separator {
+  margin: 0;
+  opacity: 1;
+  background: var(--border);
+}
+
+.contentArea {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 60vh;
+  padding: var(--spacing-2) 0;
+}
+
+.notificationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notificationItem {
+  display: flex;
+  gap: var(--spacing-3);
+  padding: var(--spacing-3) var(--spacing-4);
+  align-items: flex-start;
+}
+
+.notificationItem:hover {
+  background-color: var(--muted);
+}
+
+.iconWrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-foreground);
+}
+
+.iconBreak {
+  background-color: var(--info);
+}
+
+.iconCelebration {
+  background-color: var(--kaiblooms);
+}
+
+.iconCheckIn {
+  background-color: var(--secondary);
+}
+
+.notificationContent {
+  flex-grow: 1;
+}
+
+.notificationTitle {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--surface-foreground);
+}
+
+.notificationBody {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  margin: 0;
+  line-height: var(--line-height-normal);
+}
+
+.notificationTimestamp {
+  font-size: var(--font-size-xs);
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-1);
+  display: block;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-8) var(--spacing-4);
+  color: var(--muted-foreground);
+}
+
+.emptyIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.emptyIcon svg {
+  color: var(--muted-foreground);
+}
+
+.emptyTitle {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--surface-foreground);
+  margin: 0 0 var(--spacing-1) 0;
+}
+
+.emptyText {
+  font-size: var(--font-size-sm);
+  margin: 0;
+  max-width: 250px;
+}
+
+.footer {
+  padding: var(--spacing-3) var(--spacing-4);
+  border-top: 1px solid var(--border);
+  background-color: var(--sidebar);
+  flex-shrink: 0;
+}
+
+.permissionText {
+  font-size: var(--font-size-sm);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.permissionRequest {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

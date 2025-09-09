@@ -1,0 +1,42 @@
+.appContainer {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 768px; /* Max width for a tablet-like view */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.navigationHeader {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  min-height: var(--touch-target-comfortable);
+}
+
+.notificationCenter {
+  /* Additional styling if needed - the component handles its own styling */
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
